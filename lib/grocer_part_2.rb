@@ -48,8 +48,9 @@ def apply_clearance(cart)
   # cart = AoH, return new AoH, with all items, and updated price reduced by 20% if on clearance
   cart.map do |item|
     if item[:clearance]
-      item[:price] = item[:price] * 0.8
+      return item[:price] = item[:price] * 0.8
     end
+    item 
   end
 end
 
