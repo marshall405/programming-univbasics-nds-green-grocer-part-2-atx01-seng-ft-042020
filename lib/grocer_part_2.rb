@@ -79,7 +79,7 @@ def checkout(cart, coupons)
  
   
   applied_clearance.reduce(0.00) do |total, (key,value)|
-    total += value[:price]
+    total += (value[:price]).round(2)
   end
   
 end
