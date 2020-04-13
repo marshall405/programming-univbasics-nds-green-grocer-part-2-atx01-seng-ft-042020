@@ -41,6 +41,13 @@ def apply_coupons(cart, coupons)
   new_array
 end
 
+
+
+items = [
+  {:item => "PEANUT BUTTER", :price => 2.40, :clearance => true,  :count => 2},
+  {:item => "KALE", :price => 3.00, :clearance => false, :count => 3},
+  {:item => "SOY MILK", :price => 3.60, :clearance => true,  :count => 1}
+]
 def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
