@@ -71,4 +71,15 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+  #cart = AoH, coupons = AoH, return Float:total of the cart 
+  consolidated_cart = consolidate_cart(cart)
+  applied_coupons = apply_coupons(consolidated_cart, coupons)
+  applied_clearance = apply_clearance(applied_coupons)
+  
+ 
+  
+  applied_clearance.reduce(0.00) do |total, (key,value)|
+    total += value[:price]
+  end
+  
 end
