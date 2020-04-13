@@ -45,6 +45,13 @@ def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  # cart = AoH, return new AoH, with all items, and updated price reduced by 20% if on clearance
+  cart.map do |item|
+    if item[:clearance]
+      item[:price] *= .20
+    end
+  end
+  
 end
 
 def checkout(cart, coupons)
